@@ -11,6 +11,7 @@ screen = {"rock": "Rock go smash.", "paper": "Scissors go snipsnip.", "scissors"
 
 
 def get_choices():
+    # adding .lower() so there are not issues with capitalization
     player_choices = input("Enter a choice (rock, paper, scissors): ").lower()
     options = ["rock", "paper", "scissors"]
     computer_choices = random.choice(options)
@@ -22,7 +23,6 @@ def check_win(player, computer):
     print(f"You chose {player}, computer chose {computer}")
     if player == computer:
         return "Tie!"
-        # adding .lower() so there are not issues with capitalization
     elif wins[player] == computer:
         return f"{screen[player]} You win!"
     elif wins[computer] == player:
