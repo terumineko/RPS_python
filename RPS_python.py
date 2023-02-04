@@ -5,9 +5,6 @@
 
 import random
 
-import random
-
-global running
 running = True
 
 def get_choices():
@@ -41,7 +38,6 @@ def check_win(player, computer):
 
 
 def restart():
-    global running
     restart = input("Try again?").lower()
     if restart != "yes":
         running = False
